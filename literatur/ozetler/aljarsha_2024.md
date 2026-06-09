@@ -1,0 +1,14 @@
+# Al-Jarsha 2024 — Dinamik navigasyon kılavuzlu robotik zigomatik implant yerleştirme
+- **Künye:** Al-Jarsha MY, Diao Y, Zhao G, Imran MA, Ayoub AF, Robertson DP, Naudi KB. Dynamic navigation-guided robotic placement of zygomatic implants. J Dent. 2024;153:105463.
+- **DOI/Link:** https://doi.org/10.1016/j.jdent.2024.105463
+- **Erişim:** Paywall · PDF: yok (özet + DOI)
+- **Çalışma tipi:** In-vitro (8 plastik model), robotik + dinamik navigasyon — Kanıt düzeyi (in-vitro deneysel)
+- **Örneklem/Materyal:** 8 edentül maksilla modeli, 16 zigomatik implant
+- **Yöntem (özet):** CBCT planlama; robot kol + dinamik navigasyon; pre/post-op CBCT superimpozisyonu; sapmaların robot kolun kaydettiği **delme kuvvetiyle** Pearson korelasyonu.
+- **Ana bulgular:**
+  - Giriş 3B sapma 1.80±0.96 mm; çıkış 2.80±0.95 mm; açısal 1.74±0.92°.
+  - **Çıkış ve açısal sapma, handpiece uzun eksenine DİK delme kuvvetiyle POZİTİF; eksene PARALEL kuvvetle NEGATİF korele.**
+- **Tezle ilgisi:** DESTEKLEYİCİ kaynak (ana kaynak değil). Yalnız **Tartışma'da kuvvet etkisi** (kuvvet yönü/büyüklüğü → sapma) yorumu için. Statik guide değil (robotik/dinamik), Giriş'te kullanılmaz.
+- **Alıntılanabilir cümleler:** "Çıkış ve açısal sapmalar, uzun eksene dik delme kuvvetiyle pozitif korelasyon gösterdi."
+- **Kanıt düzeyi:** In-vitro deneysel (orta)
+- **Notlar/çekinceler:** Zigomatik implant + robotik sistem; statik guide değil ama kuvvet–sapma ilişkisi tezimize doğrudan aktarılabilir.

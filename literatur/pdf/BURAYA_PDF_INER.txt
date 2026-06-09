@@ -1,0 +1,2 @@
+Açık erişim (open-access) tam metin PDF'ler bu klasöre indirilir.
+Paywall'lu makalelerin PDF'i indirilmez; özeti ../ozetler/ altında tutulur.

@@ -1,0 +1,17 @@
+{
+  "name": "tez-guide-stabilite",
+  "owner": {
+    "name": "Ozan",
+    "url": "halilozanyasar@gmail.com"
+  },
+  "description": "Atrofik üst çenede kemik destekli cerrahi guide'larda farklı pin pozisyonlarının stabilite ve implant pozisyon sapmasına etkisi — in-vitro tez araştırma ajan ekibi.",
+  "plugins": [
+    {
+      "name": "tez-guide-stabilite",
+      "source": "./",
+      "description": "9 ajanlı in-vitro tez pipeline'ı: literatür → kanıt-haritalama → metodoloji → istatistik/analiz → yazım + strateji/denetim süpervizörü + humanizer (akademik-mod AI-yazım temizleme, MIT) + ARS köprü (academic-research-skills orkestrasyonu) + görsel 3D mind map (HTML, seans sonu güncellenen). Oturum belleği, literatür arşivi (PubMed özet+PDF), teze özel protokoller.",
+      "version": "1.5.0",
+      "license": "CC-BY-NC-4.0"
+    }
+  ]
+}

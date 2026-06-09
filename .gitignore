@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Geçici / sistem
+*.tmp
+*.lock
+~$*
+.~*
+
+# Düzenleyici
+.vscode/
+.idea/
+
+# Cowork/Claude yapılandırması
+.claude/

@@ -1,0 +1,15 @@
+# Li-Rodríguez 2022 — Frezelenmiş cerrahi şablonlu kılavuzlu implant sisteminin doğruluğu (in-vitro)
+- **Künye:** Li-Rodríguez JK, Díaz-Durany M, Romeo-Rubio M, Paz Salido M, Pradíes G. Accuracy of a guided implant system with milled surgical templates. J Oral Sci. 2022;64(2):145-150.
+- **DOI/Link:** https://doi.org/10.2334/josnusd.21-0361
+- **Erişim:** Paywall · PDF: yok (özet + DOI)
+- **Çalışma tipi:** In-vitro deneysel — orta
+- **Örneklem/Materyal:** 16 kısmi dişsiz model (8 maksilla + 8 çene), 32 implant; tam kılavuzlu (CAD/CAM frezelenmiş şablon)
+- **Yöntem (özet):** Galileo Implant yazılımıyla planlama; Cerec ile şablon tasarımı/frezeleme; planlanan-yerleştirilen arası lineer/açısal/koronal sapma.
+- **Ana bulgular:**
+  - Yatay (horizontal) toplam sapma 0.2±0.126 mm; açısal-koronal 1.1±0.834°.
+  - Maksilla vs çene modelleri arasında anlamlı fark yok (p=0.139).
+  - Sapmalar tam kılavuzlu cerrahi için önerilen güvenlik marjı içinde.
+- **Tezle ilgisi:** METOD-GEREKÇE (in-vitro statik guide doğruluk protokolü, ölçüm referansı); DISC-DESTEK (statik kılavuzun güvenli marj içinde doğruluğu — bizim ölçüm beklentimiz için referans).
+- **Alıntılanabilir cümleler:** "Chairside dijital iş akışıyla yerleştirilen implantların yatay ve açısal-koronal sapmaları tam kılavuzlu cerrahi güvenlik marjı içindeydi."
+- **Kanıt düzeyi:** In-vitro deneysel (orta)
+- **Notlar/çekinceler:** Kısmi dişsiz (tooth-supported eğilimli) modeller; atrofik tam dişsiz senaryomuzdan farkı tartışılmalı.

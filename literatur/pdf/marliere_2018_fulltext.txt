@@ -1,0 +1,42 @@
+KAYNAK (açık erişim, PubMed Central — PMC5883470)
+Marlière DAA, Demétrio MS, Picinini LS, Oliveira RG, Chaves Netto HDM.
+Accuracy of computer-guided surgery for dental implant placement in fully edentulous patients: A systematic review.
+European Journal of Dentistry. 2018;12(1):153-160.
+DOI: https://doi.org/10.4103/ejd.ejd_249_17
+Atıf: According to PubMed / PubMed Central. Açık erişim tam metin.
+
+=== TEZ İÇİN ANAHTAR ÇIKARIMLAR ===
+
+1. Sapma ölçüm parametreleri (tezde kullanılacak taksonomi):
+   - Açısal sapma (derece): implant uzun eksenleri arası açı
+   - Servikal (koronal) sapma (mm): platform/servikal bölge
+   - Apikal sapma (mm): apikal bölge
+   - Derinlik hatası (mm): apiko-servikal yerleştirme farkı
+   Karşılaştırma ancak ölçüm yöntemi benzer olduğunda mümkün (3B superimpozisyon).
+
+2. Bone-supported (kemik destekli) + fiksasyon = daha iyi doğruluk:
+   - Stübinger (2014): vida ile sabitlenen kemik destekli guide → tüm derlemedeki EN DÜŞÜK sapmalar
+     (servikal 0.71±0.399 mm, apikal 0.77±0.382 mm).
+   - Cassetta: fiksasyonlu vs fiksasyonsuz muko-destekli guide karşılaştırması — sabitlenen guide
+     anlamlı daha iyi açısal sapma (sabit 4.09° vs sabit-değil 5.62°).
+   - Sonuç: "guide fiksasyonu transoperatif stabiliteyi artırır, planlanan ile uygulanan arası hatayı azaltır."
+   → TEZİN TEMELİ: pin/fiksasyon → stabilite → daha az sapma.
+
+3. Maksilla en kötü doğruluk:
+   - Açısal sapmada en yüksek hata maksillada (ort. 8.4°, SS ±4.2°).
+   - Sebep: medüller (spongiöz baskın) kemik, torka direnç düşük → daha belirgin sapma.
+   - Mukoza kalınlığı arttıkça guide stabilitesi/repozisyon azalır (Vasak).
+   → atrofik maksillanın neden zorlu olduğunun gerekçesi (INTRO).
+
+4. In-vitro (model) çalışma gerekçesi:
+   - Model çalışmaları guide'a daha fazla stabilite sağlar (ağız tabanı, dil, bukkal mukoza yok)
+     → osteotomi ve yerleştirmede daha güvenli.
+   - Kadavra çalışmaları kemik yapısını değiştirebilir (formalin demineralizasyon) → in-vitro tercih edilir.
+   - Model çalışmalardaki sapmalar iş akışı kaynaklı (CBCT, yazılım, baskı, sleeve toleransı).
+   → bizim in-vitro tasarımımızın savunması.
+
+5. Kuvvet/yük & stres:
+   - Apikal sapma her zaman servikalden daha zor kontrol edilir (açısal sapma matematiksel olarak apekste büyür).
+   - Stres dağılımı, mastikatör kuvvet, yorulma (fatigue) ve FEA (Cicciù) tartışılıyor → kuvvet bağlamı.
+
+NOT: Bu dosya PubMed Central açık erişim tam metninden tezimize yönelik çıkarılmış özetidir; tam orijinal metin DOI bağlantısından erişilebilir.

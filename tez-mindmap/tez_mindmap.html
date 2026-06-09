@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tez Mind Map — Atrofik Maksilla / Pin Pozisyonu & Guide Stabilitesi</title>
+<style>
+  :root{
+    --bg0:#0a0e1a; --bg1:#121829; --panel:rgba(20,26,44,.78); --stroke:rgba(255,255,255,.10);
+    --txt:#e8edf7; --muted:#94a3b8; --gold:#f5c451;
+    --intro:#4f9dde; --methods:#46c49a; --results:#e0795a; --discussion:#a98be0; --limit:#d98ab0; --paper:#8090a4;
+    --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden;background:var(--bg0);color:var(--txt);font-family:var(--font)}
+  #cv{position:fixed;inset:0;display:block;cursor:grab}
+  #cv.drag{cursor:grabbing}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(1200px 800px at 70% 18%,rgba(79,157,222,.10),transparent 60%),
+               radial-gradient(1000px 700px at 18% 85%,rgba(169,139,224,.10),transparent 60%),
+               linear-gradient(180deg,var(--bg0),var(--bg1));}
+  .ui{position:fixed;z-index:5}
+  .header{top:20px;left:22px;max-width:min(560px,70vw)}
+  .header h1{margin:0;font-size:17px;font-weight:650;line-height:1.3}
+  .header .sub{margin-top:5px;font-size:12px;color:var(--muted)}
+  .header .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#46c49a;margin-right:7px;box-shadow:0 0 10px #46c49a}
+  .stats{top:20px;right:22px;display:flex;gap:9px}
+  .stat{background:var(--panel);backdrop-filter:blur(14px);border:1px solid var(--stroke);border-radius:13px;padding:9px 13px;text-align:center;min-width:70px}
+  .stat b{display:block;font-size:19px;font-weight:700}
+  .stat span{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .legend{bottom:20px;left:22px;background:var(--panel);backdrop-filter:blur(14px);border:1px solid var(--stroke);border-radius:15px;padding:13px 15px}
+  .legend h4{margin:0 0 9px;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;font-weight:600}
+  .chip{display:flex;align-items:center;gap:9px;font-size:12.5px;padding:4px 4px;cursor:pointer;border-radius:7px;transition:.15s;user-select:none}
+  .chip:hover{background:rgba(255,255,255,.05)}
+  .chip.off{opacity:.34}
+  .swatch{width:11px;height:11px;border-radius:50%;flex:none}
+  .panel{top:90px;right:22px;width:300px;background:var(--panel);backdrop-filter:blur(16px);border:1px solid var(--stroke);border-radius:18px;padding:17px;transform:translateX(18px);opacity:0;pointer-events:none;transition:.22s ease}
+  .panel.show{transform:none;opacity:1;pointer-events:auto}
+  .panel .tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:10px}
+  .panel h3{margin:0 0 8px;font-size:15px;line-height:1.35}
+  .panel p{margin:0 0 10px;font-size:12.5px;color:#c7d2e3;line-height:1.5}
+  .panel .row{font-size:12px;color:var(--muted);margin-top:7px}
+  .panel .row b{color:var(--txt);font-weight:600}
+  .panel a{color:var(--intro)}
+  .btn{display:inline-flex;align-items:center;gap:7px;margin-top:13px;padding:9px 14px;border-radius:11px;font-size:12.5px;font-weight:600;cursor:pointer;border:1px solid var(--stroke);text-decoration:none;transition:.15s}
+  .btn.pdf{background:rgba(224,121,90,.18);color:#f3b69f;border-color:rgba(224,121,90,.42)}
+  .btn.pdf:hover{background:rgba(224,121,90,.30);transform:translateY(-1px)}
+  .btn.disabled{background:rgba(255,255,255,.04);color:var(--muted);cursor:not-allowed;border-style:dashed}
+  .btn svg{width:14px;height:14px}
+  #tip{position:fixed;z-index:8;pointer-events:none;background:rgba(10,14,26,.94);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:8px 11px;font-size:12px;max-width:270px;opacity:0;transition:opacity .12s;box-shadow:0 6px 24px rgba(0,0,0,.4)}
+  .hint{bottom:22px;right:22px;font-size:11px;color:var(--muted);text-align:right;line-height:1.6}
+  kbd{background:rgba(255,255,255,.08);border:1px solid var(--stroke);border-radius:5px;padding:1px 6px;font-size:10.5px}
+</style>
+</head>
+<body>
+<canvas id="cv"></canvas>
+
+<div class="ui header">
+  <h1>Atrofik Maksilla — Pin Pozisyonu &amp; Cerrahi Guide Stabilitesi</h1>
+  <div class="sub"><span class="dot"></span>in-vitro tez · canlı kanıt haritası · <span id="updated"></span></div>
+</div>
+<div class="ui stats">
+  <div class="stat"><b id="nPapers">0</b><span>Makale</span></div>
+  <div class="stat"><b id="nFindings">0</b><span>Bulgu</span></div>
+  <div class="stat"><b id="nCov">0/5</b><span>Bölüm</span></div>
+</div>
+<div class="ui legend" id="legend"></div>
+<div class="ui panel" id="panel"></div>
+<div id="tip"></div>
+<div class="ui hint">Sürükle: gezin · düğümü sürükle: taşı · tekerlek: yakınlaş · tıkla: detay<br><kbd>boşluk</kbd> canlandır · <kbd>R</kbd> sıfırla</div>
+
+<script>
+/* ============================================================
+   VERİ — her seans sonunda gorsel_mindmap_agent günceller.
+   ============================================================ */
+const META={updated:"2026-06-09 - Oturum 1 (3 makale: 2 ana statik + 1 destekleyici kuvvet)"};
+const SECTIONS={
+  intro:{label:"Introduction",color:"#4f9dde"},
+  methods:{label:"Materials & Methods",color:"#46c49a"},
+  results:{label:"Results",color:"#e0795a"},
+  discussion:{label:"Discussion",color:"#a98be0"},
+  limit:{label:"Limitations / Future",color:"#d98ab0"}
+};
+const PAPERS=[
+  {id:"p_marliere",label:"Marlière 2018",refNo:1,doi:"10.4103/ejd.ejd_249_17",pdf:"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5883470/pdf/",
+   info:"ANA KAYNAK. Sistematik derleme (7 statik kilavuz calismasi). Kemik destekli+fiksasyon en dusuk sapma; maksilla en kotu. ACIK ERISIM.",
+   findings:[{section:"intro",text:"Maksillada acisal sapma en yuksek (~8.4 derece); meduller kemik",strength:"guclu"},
+             {section:"intro",text:"Kemik destekli+fiksasyon (pin/vida) en dusuk sapma",strength:"guclu"},
+             {section:"methods",text:"Sapma taksonomisi + in-vitro tasarim gerekcesi",strength:"guclu"},
+             {section:"discussion",text:"Fiksasyon dogrulugu artirir (Cassetta 4.09<5.62)",strength:"guclu"}]},
+  {id:"p_lirodriguez",label:"Li-Rodríguez 2022",refNo:2,doi:"10.2334/josnusd.21-0361",pdf:null,
+   info:"ANA KAYNAK. In-vitro, 16 model/32 implant; frezelenmis STATIK guide. Yatay 0.2 mm, acisal-koronal 1.1 derece.",
+   findings:[{section:"methods",text:"In-vitro statik guide sapma olcum protokolu",strength:"guclu"},
+             {section:"discussion",text:"Statik guide guvenli marj icinde dogruluk",strength:"orta"}]},
+  {id:"p_aljarsha",label:"Al-Jarsha 2024",refNo:3,doi:"10.1016/j.jdent.2024.105463",pdf:null,
+   info:"DESTEKLEYICI (ana kaynak degil). Robotik/dinamik; yalniz Tartisma'da KUVVET ETKISI icin.",
+   findings:[{section:"discussion",text:"Cikis/acisal sapma, eksene dik delme kuvvetiyle pozitif korele (kuvvet etkisi)",strength:"orta"}]}
+];
+
+/* ---------- grafik veri yapısı ---------- */
+const nodes=[], links=[], byId={};
+function add(n){n.vx=0;n.vy=0;nodes.push(n);byId[n.id]=n;return n;}
+function link(a,b){links.push({s:a,t:b});}
+
+const cx=0, cy=0;
+add({id:"thesis",type:"thesis",label:"TEZ",r:30,color:getCSS('--gold'),x:0,y:0});
+let ai=0, order=["intro","methods","results","discussion","limit"];
+order.forEach((sid,k)=>{
+  const ang=-Math.PI/2 + k*(2*Math.PI/order.length);
+  add({id:sid,type:"section",label:SECTIONS[sid].label,r:18,color:SECTIONS[sid].color,
+       x:Math.cos(ang)*150,y:Math.sin(ang)*150});
+  link("thesis",sid);
+});
+PAPERS.forEach((p,pi)=>{
+  const ang=Math.random()*Math.PI*2, R=300+Math.random()*60;
+  const pn=add({id:p.id,type:"paper",label:p.label,r:13,color:getCSS('--paper'),
+    x:Math.cos(ang)*R,y:Math.sin(ang)*R,doi:p.doi,refNo:p.refNo,pdf:p.pdf,info:p.info,nFindings:p.findings.length});
+  p.findings.forEach((f,fi)=>{
+    const fid=p.id+"_f"+fi;
+    const fn=add({id:fid,type:"finding",label:f.text,r:7,color:SECTIONS[f.section].color,section:f.section,
+      strength:f.strength,paper:p.label,refNo:p.refNo,
+      x:pn.x+(Math.random()-.5)*60,y:pn.y+(Math.random()-.5)*60});
+    link(p.id,fid); link(fid,f.section);
+  });
+});
+function getCSS(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()||'#888';}
+links.forEach(function(l){l.s=byId[l.s];l.t=byId[l.t];});
+
+/* ---------- force simülasyonu ---------- */
+const hidden=new Set();
+function visible(n){
+  if(n.type==='paper') return !hidden.has('paper');
+  if(n.type==='finding'||n.type==='section') return !hidden.has(n.section||n.id);
+  return true;
+}
+function linkLen(l){const tt=l.t.type; return tt==='finding'?34:(tt==='section'&&l.s.type==='thesis'?150:60);}
+function tick(){
+  const act=nodes.filter(visible);
+  // repulsion
+  for(let i=0;i<act.length;i++){const a=act[i];
+    for(let j=i+1;j<act.length;j++){const b=act[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+0.01, d=Math.sqrt(d2);
+      const rep=(a.r+b.r)*(a.r+b.r)*2.2;
+      let f=rep/d2; if(f>3)f=3; const fx=dx/d*f, fy=dy/d*f;
+      if(!a.fix){a.vx+=fx;a.vy+=fy;} if(!b.fix){b.vx-=fx;b.vy-=fy;}
+    }}
+  // springs
+  links.forEach(l=>{ if(!visible(l.s)||!visible(l.t))return;
+    let dx=l.t.x-l.s.x, dy=l.t.y-l.s.y, d=Math.sqrt(dx*dx+dy*dy)+.01;
+    const L=linkLen(l), f=(d-L)*0.012, fx=dx/d*f, fy=dy/d*f;
+    if(!l.s.fix){l.s.vx+=fx;l.s.vy+=fy;} if(!l.t.fix){l.t.vx-=fx;l.t.vy-=fy;}
+  });
+  // gravity to center + integrate
+  act.forEach(n=>{ if(n.fix)return;
+    n.vx+= -n.x*0.0016; n.vy+= -n.y*0.0016;
+    n.vx*=0.86; n.vy*=0.86;
+    n.x+=n.vx; n.y+=n.vy;
+    if(!isFinite(n.x)||!isFinite(n.y)){n.x=(Math.random()-.5)*120;n.y=(Math.random()-.5)*120;n.vx=0;n.vy=0;}
+  });
+}
+
+/* ---------- kamera & render ---------- */
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
+let DPR=Math.min(window.devicePixelRatio||1,2), W=0,H=0;
+let view={s:1, tx:0, ty:0};
+function resize(){W=window.innerWidth;H=window.innerHeight;cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';}
+window.addEventListener('resize',resize); resize();
+view.tx=W/2; view.ty=H/2;
+function toScreen(n){return{x:n.x*view.s+view.tx, y:n.y*view.s+view.ty};}
+function toWorld(px,py){return{x:(px-view.tx)/view.s, y:(py-view.ty)/view.s};}
+
+let particles=0;
+function draw(){
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  ctx.clearRect(0,0,W,H);
+  // links
+  links.forEach(l=>{ if(!visible(l.s)||!visible(l.t))return;
+    const a=toScreen(l.s), b=toScreen(l.t);
+    const isEv=(l.t.type==='finding'||l.s.type==='finding');
+    ctx.strokeStyle=isEv?hexA(l.t.type==='finding'?l.t.color:l.s.color,0.42):'rgba(255,255,255,0.13)';
+    ctx.lineWidth=isEv?1.4:1;
+    ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+    // akan partikül
+    if(isEv){const t=((particles/120)+(l.s.x*0.013))%1; const px=a.x+(b.x-a.x)*t, py=a.y+(b.y-a.y)*t;
+      ctx.fillStyle=hexA(l.t.color,0.9);ctx.beginPath();ctx.arc(px,py,1.7,0,7);ctx.fill();}
+  });
+  // nodes
+  nodes.forEach(n=>{ if(!visible(n))return;
+    const p=toScreen(n), r=n.r*view.s;
+    if(!isFinite(p.x)||!isFinite(p.y)||!isFinite(r)||r<=0)return;
+    // glow
+    const g=ctx.createRadialGradient(p.x,p.y-r*0.3,r*0.2,p.x,p.y,r*1.05);
+    g.addColorStop(0,lighten(n.color)); g.addColorStop(1,n.color);
+    ctx.fillStyle=g; ctx.beginPath();ctx.arc(p.x,p.y,r,0,7);ctx.fill();
+    if(n===sel){ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke();}
+    else if(n.type==='paper'&&n.pdf){ctx.strokeStyle='#46c49a';ctx.lineWidth=2;ctx.stroke();}
+    // labels
+    if(n.type==='thesis'){label(p.x,p.y,'TEZ',13,'#3a2c08',true);}
+    else if(n.type==='section'){label(p.x,p.y-r-11,n.label,12.5,'#fff',true);}
+    else if(n.type==='paper'){label(p.x,p.y-r-9,n.label,11.5,'#e8edf7',true);
+      label(p.x,p.y+r+10,'['+n.refNo+']',11,'#f5c451',true);}
+  });
+  particles++;
+  requestAnimationFrame(function(){for(var k=0;k<2;k++)tick();draw();});
+}
+function label(x,y,t,size,col,center){ctx.font='600 '+size+'px '+getCSS('--font');
+  ctx.textAlign=center?'center':'left';ctx.textBaseline='middle';
+  ctx.fillStyle='rgba(10,14,26,.55)';
+  var w=ctx.measureText(t).width;
+  ctx.fillRect(x-(center?w/2:0)-4,y-size/2-2,w+8,size+4);
+  ctx.fillStyle=col;ctx.fillText(t,x,y);}
+function hexA(h,a){h=h.replace('#','');var n=parseInt(h.length===3?h.replace(/(.)/g,'$1$1'):h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+function lighten(h){h=h.replace('#','');var n=parseInt(h,16),r=(n>>16)&255,g=(n>>8)&255,b=n&255;
+  r=Math.min(255,r+50);g=Math.min(255,g+50);b=Math.min(255,b+50);return 'rgb('+r+','+g+','+b+')';}
+
+var sel=null, dragNode=null, panning=false, last={x:0,y:0};
+function nodeAt(px,py){var best=null,bd=1e9;
+  nodes.forEach(function(n){if(!visible(n))return;var p=toScreen(n);var d=Math.hypot(p.x-px,p.y-py);
+    if(d<n.r*view.s+4&&d<bd){bd=d;best=n;}});return best;}
+cv.addEventListener('mousemove',function(e){
+  var px=e.clientX,py=e.clientY;
+  if(dragNode){var w=toWorld(px,py);dragNode.x=w.x;dragNode.y=w.y;dragNode.vx=dragNode.vy=0;return;}
+  if(panning){view.tx+=px-last.x;view.ty+=py-last.y;last={x:px,y:py};return;}
+  var n=nodeAt(px,py); cv.style.cursor=n?'pointer':'grab';
+  var tip=document.getElementById('tip');
+  if(n&&(n.type==='paper'||n.type==='finding')){
+    var html='';
+    if(n.type==='paper'){html='<b>'+n.label+'</b><div style="color:#f5c451;margin-top:3px">Kaynakca no ['+n.refNo+'] - '+n.nFindings+' bulgu</div>'+
+      (n.doi?'<div style="color:#4f9dde;margin-top:2px">doi:'+n.doi+'</div>':'')+
+      (n.pdf?'<div style="color:#f3b69f;margin-top:2px">PDF mevcut (klasorde)</div>':'<div style="color:#94a3b8;margin-top:2px">PDF yok (paywall)</div>')+
+      '<div style="color:#94a3b8;font-size:10px;margin-top:3px">tikla: DOI + PDF + detay</div>';}
+    else{html='<b>'+n.label+'</b><div style="color:'+n.color+';margin-top:3px">'+SECTIONS[n.section].label+' - ['+n.refNo+'] '+n.paper+'</div><div style="color:#94a3b8;margin-top:2px">kanit gucu: '+n.strength+'</div>';}
+    tip.innerHTML=html;tip.style.left=Math.min(px+14,W-280)+'px';tip.style.top=(py+14)+'px';tip.style.opacity=1;
+  } else tip.style.opacity=0;
+});
+cv.addEventListener('mousedown',function(e){var n=nodeAt(e.clientX,e.clientY);
+  if(n){dragNode=n;n.fix=true;cv.classList.add('drag');}
+  else{panning=true;last={x:e.clientX,y:e.clientY};cv.classList.add('drag');}});
+window.addEventListener('mouseup',function(){if(dragNode){dragNode.fix=false;dragNode=null;}panning=false;cv.classList.remove('drag');});
+cv.addEventListener('click',function(e){var n=nodeAt(e.clientX,e.clientY);
+  if(n&&n.type!=='thesis'){sel=n;showPanel(n);} else {sel=null;document.getElementById('panel').classList.remove('show');}});
+cv.addEventListener('wheel',function(e){e.preventDefault();var f=e.deltaY<0?1.12:0.89;
+  var wx=(e.clientX-view.tx)/view.s, wy=(e.clientY-view.ty)/view.s;
+  view.s=Math.max(0.3,Math.min(3,view.s*f));
+  view.tx=e.clientX-wx*view.s; view.ty=e.clientY-wy*view.s;},{passive:false});
+
+function showPanel(n){
+  var p=document.getElementById('panel');
+  var col=n.color, tagText=n.type==='section'?'BOLUM':n.type==='paper'?'MAKALE':'BULGU';
+  var rows='';
+  if(n.type==='paper'){
+    var doiUrl=n.doi?(n.doi.indexOf('http')===0?n.doi:'https://doi.org/'+n.doi):null;
+    var ic='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>';
+    var pdfBtn=n.pdf?'<a class="btn pdf" href="'+n.pdf+'" target="_blank" rel="noopener">'+ic+" PDF'i Ac</a>":'<span class="btn disabled">'+ic+' PDF yok (paywall)</span>';
+    rows='<div class="row"><b>Kaynakca no:</b> ['+n.refNo+'] (Vancouver)</div>'+
+         '<div class="row"><b>Tezde kullanim:</b> '+n.nFindings+' bulgu</div>'+
+         (doiUrl?'<div class="row"><b>DOI:</b> <a href="'+doiUrl+'" target="_blank" rel="noopener">'+n.doi+'</a></div>':'')+
+         '<div>'+pdfBtn+'</div>';
+  } else if(n.type==='finding'){
+    rows='<div class="row"><b>Hedef bolum:</b> '+SECTIONS[n.section].label+'</div>'+
+         '<div class="row"><b>Kaynak:</b> ['+n.refNo+'] '+n.paper+'</div>'+
+         '<div class="row"><b>Kanit gucu:</b> '+n.strength+'</div>';
+  }
+  p.innerHTML='<span class="tag" style="background:'+hexA(col,.18)+';color:'+col+'">'+tagText+(n.type==='paper'?' - ['+n.refNo+']':'')+'</span>'+
+    '<h3>'+n.label+'</h3>'+(n.info?'<p>'+n.info+'</p>':'')+rows;
+  p.classList.add('show');
+}
+
+var legend=document.getElementById('legend');
+legend.innerHTML='<h4>Bolumler - filtrele</h4>'+
+  Object.keys(SECTIONS).map(function(k){return '<div class="chip" data-sec="'+k+'"><span class="swatch" style="background:'+SECTIONS[k].color+'"></span>'+SECTIONS[k].label+'</div>';}).join('')+
+  '<div class="chip" data-sec="paper"><span class="swatch" style="background:#8090a4"></span>Makaleler</div>';
+legend.querySelectorAll('.chip').forEach(function(ch){ch.onclick=function(){var sset=ch.dataset.sec;ch.classList.toggle('off');hidden.has(sset)?hidden.delete(sset):hidden.add(sset);};});
+
+(function(){var nf=PAPERS.reduce(function(a,p){return a+p.findings.length;},0);
+  var cov={};PAPERS.forEach(function(p){p.findings.forEach(function(f){cov[f.section]=1;});});
+  document.getElementById('nPapers').textContent=PAPERS.length;
+  document.getElementById('nFindings').textContent=nf;
+  document.getElementById('nCov').textContent=Object.keys(cov).length+'/5';
+  document.getElementById('updated').textContent='son guncelleme: '+META.updated;})();
+
+addEventListener('keydown',function(e){
+  if(e.code==='Space'){e.preventDefault();nodes.forEach(function(n){if(!n.fix){n.vx+=(Math.random()-.5)*6;n.vy+=(Math.random()-.5)*6;}});}
+  if(e.key.toLowerCase()==='r'){view={s:1,tx:W/2,ty:H/2};sel=null;document.getElementById('panel').classList.remove('show');}
+});
+
+for(var i2=0;i2<140;i2++)tick();
+draw();
+</script>
+</body>
+</html>

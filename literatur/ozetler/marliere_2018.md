@@ -1,0 +1,16 @@
+# Marlière 2018 — Tam dişsiz hastalarda bilgisayar destekli cerrahinin doğruluğu (sistematik derleme)
+- **Künye:** Marlière DAA, Demétrio MS, Picinini LS, Oliveira RG, Chaves Netto HDM. Accuracy of computer-guided surgery for dental implant placement in fully edentulous patients: A systematic review. Eur J Dent. 2018;12(1):153-160.
+- **DOI/Link:** https://doi.org/10.4103/ejd.ejd_249_17
+- **Erişim:** Açık erişim (PMC5883470) · PDF linki: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5883470/pdf/ (tam metin notları: `pdf/marliere_2018_fulltext.txt`)
+- **Çalışma tipi:** Sistematik derleme (7 klinik çalışma) — Kanıt düzeyi I-II
+- **Örneklem/Materyal:** 95 tam dişsiz hasta, 638 implant; statik bilgisayar destekli cerrahi
+- **Yöntem (özet):** 2011-2016 PubMed taraması; bone- ve muko-destekli guide'lar; 3B superimpozisyonla açısal/servikal/apikal/derinlik sapması.
+- **Ana bulgular:**
+  - Açısal sapma 1.85°–8.4°; servikal 0.17–2.17 mm; apikal 0.77–2.86 mm.
+  - **Maksillada en yüksek açısal sapma** (ort. 8.4°, SS ±4.2°) — medüller kemik, düşük tork direnci.
+  - **Kemik destekli + fiksasyonlu guide en düşük sapma** (Stübinger: servikal 0.71 mm, apikal 0.77 mm).
+  - **Fiksasyon doğruluğu artırır** (Cassetta: sabit 4.09° vs sabit-değil 5.62° açısal).
+- **Tezle ilgisi:** INTRO (atrofik maksilla zorluğu + guide doğruluğu bağlamı); INTRO-BOŞLUK (fiksasyon-stabilite ilişkisi); METOD (sapma taksonomisi + in-vitro gerekçe); DISC (kemik destekli + fiksasyon → daha az sapma → bizim hipotezi destekler).
+- **Alıntılanabilir cümleler:** "Guide fiksasyonu transoperatif stabiliteyi artırır ve planlanan ile uygulanan arası hatayı azaltır." / "Maksillada doğruluk en düşüktür."
+- **Kanıt düzeyi:** I-II (sistematik derleme)
+- **Notlar/çekinceler:** Klinik çalışmalar; in-vitro/model çalışmalar doğruluk değerlendirmesinden hariç tutulmuş (yine de in-vitro stabilite avantajını tartışıyor).
