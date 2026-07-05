@@ -1,0 +1,16 @@
+# Elnadoury 2025 — Mandibular tek-taraflı distal uzantıda cerrahi guide stabilitesini etkileyen faktörler (in-vitro)
+- **Künye:** Elnadoury EA, Gaweesh YS, Abu El Sadat SM, Abd-Ellah ME. Factors affecting stability of surgical guides in mandibular unilateral distal extension situation: An in vitro study. J Prosthodont. 2025 (online ahead of print).
+- **DOI/Link:** https://doi.org/10.1111/jopr.14043
+- **Erişim:** Paywall · PDF: yok (özet + DOI) · PMID 40038852
+- **Çalışma tipi:** In-vitro deneysel (kuvvet altında guide stabilitesi, tahribatsız) — Kanıt düzeyi orta
+- **Örneklem/Materyal:** 10 epoksi reçine model + yumuşak doku simülasyon materyali. Her model için 3 tasarım: tam uzatılmış / iki fiksasyon pini / tek fiksasyon pini. İki sleeve (premolar + molar). 470 sanal implant.
+- **Yöntem (özet):** Bukkal ve oral yönden artan kuvvet (0.1, 1, 2.5, 5 N) uygulandı; intraoral tarayıcı ile guide deplasmanı yakalandı; her taramaya sanal implant eklenerek planlanan pozisyondan sapma ölçüldü (gerçek delme yok = tahribatsız, model tekrar kullanılabilir).
+- **Ana bulgular:**
+  - İki fiksasyon pini en az dikey implant sapması (0.38±0.27 mm, p<0.001) ve en az guide sapması (0.52±0.25 mm, p<0.001).
+  - Kuvvet yönü dikey sapmada büyük etki (η=0.15, p<0.001); kuvvet büyüklüğü açısal sapmada büyük etki (η=0.34, p<0.001).
+  - Molar implant bölgesinde dikey sapma daha büyük (0.59±0.48 mm).
+  - **Uygulanan kuvvet ve implant konumu, guide tasarımından daha baskın etkili.**
+- **Tezle ilgisi:** ANA KAYNAK. METOD-GEREKÇE (kuvvet altında guide mikro-hareketi + sanal implant tahribatsız ölçüm protokolü — bizim birincil çıktıya birebir); DISC-DESTEK (2 pin > 1 pin). Boşluk: mandibula + diş destekli; atrofik maksilla / D3 kemik-destekli değil; pin konumu (bukkal-palatal/açı) ekseni yok.
+- **Alıntılanabilir cümleler:** "Incorporating two fixation pins into unilateral tooth-supported guides significantly enhances stability and minimizes implant deviation." / "Forces applied during guided surgery and implant location have a substantial impact, exceeding the influence of the guide design."
+- **Kanıt düzeyi:** In-vitro deneysel (orta)
+- **Notlar/çekinceler:** Mandibula + diş destekli; kemik yoğunluğu kontrol edilmemiş (epoksi). Kuvvet protokolü ve tarayıcı-tabanlı deplasman ölçümü bizim metodumuza doğrudan model.

@@ -73,7 +73,7 @@
 /* ============================================================
    VERİ — her seans sonunda gorsel_mindmap_agent günceller.
    ============================================================ */
-const META={updated:"2026-06-09 - Oturum 1 (3 makale: 2 ana statik + 1 destekleyici kuvvet)"};
+const META={updated:"2026-06-12 - Oturum 2 (8 makale: 3 onceki + 5 cekirdek: Chen 2023, Elnadoury 2025, Pessoa 2021, Verhamme 2014/2013)"};
 const SECTIONS={
   intro:{label:"Introduction",color:"#4f9dde"},
   methods:{label:"Materials & Methods",color:"#46c49a"},
@@ -94,7 +94,29 @@ const PAPERS=[
              {section:"discussion",text:"Statik guide guvenli marj icinde dogruluk",strength:"orta"}]},
   {id:"p_aljarsha",label:"Al-Jarsha 2024",refNo:3,doi:"10.1016/j.jdent.2024.105463",pdf:null,
    info:"DESTEKLEYICI (ana kaynak degil). Robotik/dinamik; yalniz Tartisma'da KUVVET ETKISI icin.",
-   findings:[{section:"discussion",text:"Cikis/acisal sapma, eksene dik delme kuvvetiyle pozitif korele (kuvvet etkisi)",strength:"orta"}]}
+   findings:[{section:"discussion",text:"Cikis/acisal sapma, eksene dik delme kuvvetiyle pozitif korele (kuvvet etkisi)",strength:"orta"}]},
+  {id:"p_chen",label:"Chen 2023",refNo:4,doi:"10.1016/j.joms.2022.12.017",pdf:null,
+   info:"CEKIRDEK. In-vitro maksiller serbest-sonlu; 4 pin protokolu (pinsiz/bukkal/palatal/bilateral). Bilateral pin en az sapma.",
+   findings:[{section:"intro",text:"Fiksasyon pini implant dogrulugunu artirir (pin konfigurasyonu gerekcesi)",strength:"guclu"},
+             {section:"methods",text:"Pin protokol matrisi (NF/BF/PF/BPF) - tasarim ornegi",strength:"guclu"},
+             {section:"discussion",text:"Bilateral pin en dusuk sapma (1.88 vs 3.65 derece); tek pin konumu etkisiz",strength:"guclu"}]},
+  {id:"p_elnadoury",label:"Elnadoury 2025",refNo:5,doi:"10.1111/jopr.14043",pdf:null,
+   info:"CEKIRDEK. In-vitro, 10 epoksi model; kuvvet altinda (0.1-5 N) guide deplasmani + sanal implant (tahribatsiz olcum).",
+   findings:[{section:"methods",text:"Kuvvet altinda guide mikro-hareketi + sanal implant tahribatsiz olcum protokolu",strength:"guclu"},
+             {section:"discussion",text:"2 pin en az guide (0.52 mm) ve implant (0.38 mm) sapmasi; kuvvet tasarimdan baskin",strength:"guclu"}]},
+  {id:"p_pessoa",label:"Pessoa 2021",refNo:6,doi:"10.1111/jopr.13371",pdf:null,
+   info:"CEKIRDEK. In-vitro, 32 maksiller recine model; fiksasyon pini var/yok. Pin depth & angular sapmada anlamli.",
+   findings:[{section:"methods",text:"Maksiller recine model + guide/implant sapma olcum protokolu",strength:"guclu"},
+             {section:"discussion",text:"Fiksasyon pini depth & angular sapmada anlamli (p=0.005/0.044)",strength:"guclu"},
+             {section:"limit",text:"Basili guide sleeve plandan ~0.5 mm koronalde (model hata kaynagi)",strength:"orta"}]},
+  {id:"p_verhamme14",label:"Verhamme 2014",refNo:7,doi:"10.1111/cid.12230",pdf:null,
+   info:"CEKIRDEK (klinik). Atrofik/augmente maksilla, mukoza destekli sablon; fiksasyon pini sapma & sablon stabilitesinde ANLAMLI.",
+   findings:[{section:"intro",text:"Atrofik maksillada sapma standarttan buyuk (klinik baglam)",strength:"guclu"},
+             {section:"discussion",text:"Fiksasyon pini atrofik maksillada sapma & sablon rotasyon/translasyonunda anlamli",strength:"guclu"}]},
+  {id:"p_verhamme13",label:"Verhamme 2013",refNo:8,doi:"10.1111/cid.12112",pdf:null,
+   info:"CEKIRDEK (celiski ekseni). Standart odentuloz maksilla, mukoza destekli; fiksasyon pini sapmada ETKISIZ.",
+   findings:[{section:"discussion",text:"CELISKI: pin etkisiz (2013) vs anlamli (2014) -> pin etkisi kemik/destek kosuluna bagli",strength:"guclu"},
+             {section:"intro",text:"Pin etkisi literaturde tartismali -> kontrollu in-vitro gerekcesi (atrofik D3 boslugu)",strength:"guclu"}]}
 ];
 
 /* ---------- grafik veri yapısı ---------- */

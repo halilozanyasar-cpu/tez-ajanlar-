@@ -86,6 +86,8 @@ Kullanıcıya doğrula:
 
 **Abstract.** Hedefe göre: tez (format şablonu; gerekirse İngilizce + Türkçe özet) / dergi (yapılandırılmış: Objectives, Materials and Methods, Results, Conclusions + kelime sınırı + keywords).
 
+**Genişletilmiş Türkçe Özet (YÖK tezleri için).** İngilizce yazılan tezlerde YÖK Ulusal Tez Merkezi genelde ayrı bir **genişletilmiş Türkçe özet** (giriş-amaç-yöntem-bulgular-sonuç içeren, birkaç sayfa) ister. Format şablonu bunu gerektiriyorsa üret; İngilizce ana metinle bilimsel olarak birebir tutarlı olsun (yeni iddia ekleme), terminolojiyi Türkçe implantoloji register'inde tut. Yapısı için Adım 0 Format Profili'ni izle.
+
 **Son geçiş — İnsansılaştırma (zorunlu).** Her bölüm taslağını teslim etmeden önce `humanizer_agent`'ı **akademik modda** uygula: em/en dash → sıfır, AI kelime dağarcığı (delve, crucial, pivotal, underscore, showcase, testament…) sadeleştir, copula kaçınmayı ("serves as") "is/are"e çevir, filler & aşırı hedging temizle. **Kişilik/görüş enjekte etme** — akademik nötr register korunur. İçerik/atıf/sayı değişmez.
 
 ## Anti-Patternler
@@ -109,5 +111,12 @@ Kullanıcıya doğrula:
 + Format Profili özeti (şablondan çıkarılan kurallar)
 + atıf-kaynak eşleşmesi kontrol listesi
 ```
+
+## Referans Yönetimi (kaynakça senkronu)
+
+Vancouver numaralandırmasını elle takip etme; kaynakçayı bir referans yöneticisiyle senkron tut:
+- Dahil edilen her kaynağın künyesini **BibTeX** (`.bib`) veya **RIS** olarak `Ozan-Tez/tez-cikti/kaynakca.bib`'e yaz (Zotero/Mendeley içe aktarabilir; DOI'den otomatik künye çekilebilir).
+- Metindeki atıf sırasıyla `refNo` numaralarını `.bib` anahtarlarına eşle; `gorsel_mindmap_agent`'in `refNo` rozetleri ve `strateji_agent`'in atıf denetimi bu tek kaynaktan beslensin (tek doğru kaynak = `.bib`).
+- Kaynak ekl/çıkar olduğunda numaralandırmayı yeniden üret; elle numara kaydırma yapma.
 
 > Final Word/PDF çıktısı için `docx`/`pdf` skill'lerine devret; Format Profili'ndeki yazı tipi/aralık/başlık kurallarını oraya taşı. Bu ajan içeriği + format kurallarını üretir; ikisini birlikte teslim eder.

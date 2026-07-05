@@ -6,13 +6,19 @@
 
 ```
 Ozan-Tez/tez-bellek/
-├── literatur_bellek.md      # literatur_agent
-├── metodoloji_bellek.md     # metodoloji_agent
-├── istatistik_bellek.md     # istatistik_analiz_agent
-└── yazim_bellek.md          # yazim_agent
+├── literatur_bellek.md          # literatur_agent
+├── kanit_haritalama_bellek.md   # kanit_haritalama_agent
+├── metodoloji_bellek.md         # metodoloji_agent
+├── istatistik_bellek.md         # istatistik_analiz_agent
+├── yazim_bellek.md              # yazim_agent
+├── strateji_bellek.md           # strateji_agent
+├── juri_savunma_bellek.md       # juri_savunma_agent
+└── gorsel_mindmap_bellek.md     # gorsel_mindmap_agent
 ```
 
 > Bellek dosyaları **kullanıcı klasöründe** tutulur (skill paketinde değil), çünkü tez ilerledikçe değişen, kalıcı, kullanıcının görebileceği durumdur.
+>
+> **Bellek tutan ajanlar (8):** yukarıdaki sekiz ajan kalıcı bellek dosyası tutar (`juri_savunma_agent` açık/kapanan itirazları ve savunma durumunu izlediği için durumludur). **Bellek tutmayan (3):** `humanizer_agent` ve `ozgunluk_denetim_agent` durumsuz üslup/QA geçişleridir (çıktıları yazım akışına gider, kalıcı durum taşımaz); `ars_kopru_agent` orkestrasyon köprüsüdür ve denetim sonuçlarını `strateji_bellek.md`'e özetler (kendi ayrı belleği yoktur).
 
 ## İki zorunlu kural (her ajan)
 

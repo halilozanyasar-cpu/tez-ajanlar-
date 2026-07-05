@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tez Literatür Mindmap — Fiksasyon Pin Pozisyonu & Guide Stabilitesi</title>
+<style>
+  :root{
+    --bg:#0f1620; --panel:#16212e; --ink:#e8eef4; --muted:#9fb0c0;
+    --invitro:#1f9e8f; --invitro-d:#0e6b60;
+    --klinik:#e08a3c; --klinik-d:#a85f1e;
+    --center:#5b7cc4; --center-d:#3a5694;
+    --line:#3a4a5c; --card:#1c2935; --border:#2c3c4d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(160deg,#0d141d,#0f1620 60%);color:var(--ink);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.5}
+  header{padding:22px 26px 8px}
+  h1{margin:0 0 4px;font-size:20px;font-weight:650}
+  .sub{color:var(--muted);font-size:13px;max-width:880px}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin:14px 26px 4px;font-size:12.5px}
+  .legend span{display:inline-flex;align-items:center;gap:7px;color:var(--muted)}
+  .dot{width:13px;height:13px;border-radius:3px;display:inline-block}
+  .wrap{display:flex;gap:18px;padding:8px 22px 30px;align-items:flex-start;flex-wrap:wrap}
+  .map{flex:1 1 560px;min-width:320px;background:var(--panel);border:1px solid var(--border);
+    border-radius:14px;padding:6px}
+  svg{width:100%;height:auto;display:block}
+  .node{cursor:pointer;transition:transform .12s}
+  .node rect{transition:filter .12s,stroke-width .12s}
+  .node:hover rect{filter:brightness(1.15)}
+  .node text{pointer-events:none;font-family:inherit}
+  .node .t1{font-weight:700;font-size:14px;fill:#fff}
+  .node .t2{font-size:11px;fill:#eef4ff;opacity:.85}
+  .clbl{font-weight:750;font-size:14px;fill:#fff}
+  .clbl2{font-size:11px;fill:#dfe9ff;opacity:.9}
+  .panel{flex:1 1 360px;min-width:300px;background:var(--panel);border:1px solid var(--border);
+    border-radius:14px;padding:18px 20px;min-height:340px}
+  .panel h2{margin:0 0 2px;font-size:16px}
+  .badge{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;margin:0 6px 6px 0;
+    font-weight:600}
+  .b-invitro{background:rgba(31,158,143,.18);color:#5fd8c8;border:1px solid var(--invitro-d)}
+  .b-klinik{background:rgba(224,138,60,.18);color:#f0b277;border:1px solid var(--klinik-d)}
+  .cite{font-size:12.5px;color:var(--muted);margin:6px 0 12px;border-left:3px solid var(--line);
+    padding-left:10px}
+  .cite a{color:#7fb0ff}
+  .row{margin:11px 0}
+  .row .k{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);
+    margin-bottom:3px;font-weight:700}
+  .row .v{font-size:13.5px}
+  .rel{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:11px 13px;margin-top:6px}
+  .rel .v{font-size:13.5px}
+  .hint{color:var(--muted);font-size:13px}
+  .tags{margin-top:4px}
+  .tg{display:inline-block;font-size:10.5px;color:var(--muted);background:#13202c;border:1px solid var(--border);
+    border-radius:6px;padding:1px 7px;margin:0 5px 5px 0}
+  footer{color:var(--muted);font-size:11.5px;padding:0 26px 26px;max-width:900px}
+  .gap{background:rgba(224,138,60,.10);border:1px solid var(--klinik-d);border-radius:8px;padding:8px 11px;
+    font-size:12.5px;color:#f0b277;margin-top:10px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Tez Literatür Haritası</h1>
+  <div class="sub">Atrofik üst çenede <b>kemik destekli cerrahi guide'larda fiksasyon pin pozisyonunun</b> guide stabilitesi ve implant pozisyon sapmasına etkisi — birebir ilgili 5 makale. Bir düğüme <b>tıklayın</b>: künye, yöntem/model, bulgular ve tezle ilişkisi sağda görünür. Tüm referanslar PubMed/DOI ile doğrulanmıştır.</div>
+</header>
+<div class="legend">
+  <span><i class="dot" style="background:var(--invitro)"></i> In-vitro doğruluk / model çalışması</span>
+  <span><i class="dot" style="background:var(--klinik)"></i> Klinik — ödentulöz / atrofik maksilla</span>
+  <span><i class="dot" style="background:var(--center)"></i> Tez konusu</span>
+</div>
+
+<div class="wrap">
+  <div class="map">
+    <svg viewBox="0 0 1000 700" role="img" aria-label="Makale mindmap">
+      <!-- connectors -->
+      <g stroke="var(--line)" stroke-width="2.5" fill="none">
+        <line x1="500" y1="350" x2="500" y2="140"/>
+        <line x1="500" y1="350" x2="835" y2="250"/>
+        <line x1="500" y1="350" x2="775" y2="565"/>
+        <line x1="500" y1="350" x2="225" y2="565"/>
+        <line x1="500" y1="350" x2="165" y2="250"/>
+      </g>
+
+      <!-- center -->
+      <g>
+        <rect x="372" y="300" width="256" height="100" rx="16" fill="var(--center)" stroke="var(--center-d)" stroke-width="3"/>
+        <text x="500" y="338" text-anchor="middle" class="clbl">Fiksasyon Pin Pozisyonu</text>
+        <text x="500" y="358" text-anchor="middle" class="clbl2">→ Guide stabilitesi (kuvvet altında</text>
+        <text x="500" y="373" text-anchor="middle" class="clbl2">mikro-hareket) + implant sapması</text>
+        <text x="500" y="391" text-anchor="middle" class="clbl2">Atrofik maksilla · D3 · in-vitro</text>
+      </g>
+
+      <!-- nodes (filled by JS) -->
+      <g id="n0" class="node" tabindex="0"></g>
+      <g id="n1" class="node" tabindex="0"></g>
+      <g id="n2" class="node" tabindex="0"></g>
+      <g id="n3" class="node" tabindex="0"></g>
+      <g id="n4" class="node" tabindex="0"></g>
+    </svg>
+  </div>
+
+  <aside class="panel" id="panel">
+    <div class="hint" id="defaultHint">
+      <h2 style="color:var(--ink)">Nasıl kullanılır?</h2>
+      <p>Soldaki haritada bir makaleye tıklayın. Renkler tema grubunu gösterir: <b style="color:#5fd8c8">turkuaz</b> = in-vitro doğruluk çalışmaları, <b style="color:#f0b277">turuncu</b> = klinik (ödentulöz/atrofik maksilla) çalışmalar.</p>
+      <p class="hint">5 makalenin ortak izlekleri: <span class="tg">fiksasyon pini</span> <span class="tg">guide/template stabilitesi</span> <span class="tg">implant sapması</span> <span class="tg">maksilla</span> <span class="tg">model materyali</span></p>
+      <div class="gap"><b>Literatürdeki boşluk:</b> In-vitro çalışmalar pin <i>varlığının</i> faydasını gösteriyor; klinik çalışmalar çelişkili (Verhamme 2014 pin anlamlı ↔ Verhamme 2013 pin etkisiz). Hiçbiri <b>atrofik D3 kemik-destekli</b> guide'da pin <b>pozisyonunu</b> kontrollü ölçmedi → Ozan'ın tezinin özgün alanı.</div>
+    </div>
+    <div id="detail" style="display:none"></div>
+  </aside>
+</div>
+
+<footer>
+  Kaynaklar PubMed üzerinden alınmış ve DOI ile doğrulanmıştır (Chen 2023; Elnadoury 2025; Pessoa 2021; Verhamme 2014; Verhamme 2013). Bu harita bir özet/çalışma aracıdır; künyelerin tam metni dergi sürümünden teyit edilmelidir.
+</footer>
+
+<script>
+const G = { invitro:{fill:'var(--invitro)',stroke:'var(--invitro-d)',cls:'b-invitro',name:'In-vitro doğruluk'},
+            klinik:{fill:'var(--klinik)',stroke:'var(--klinik-d)',cls:'b-klinik',name:'Klinik (atrofik/ödentulöz)'} };
+
+const articles = [
+  { pos:{x:500,y:90}, group:'invitro',
+    short:'Chen ve ark.', short2:'2023 · J Oral Maxillofac Surg',
+    title:'Fixation Pins Increase the Accuracy of Implant Surgery in Free-End Models: An In Vitro Study',
+    cite:'Chen X, Yang Z, Wang Y, Fu G. (2023). <i>J Oral Maxillofac Surg</i>, 81(5):593–601.',
+    doi:'10.1016/j.joms.2022.12.017',
+    amac:'Maksiller serbest-sonlu durumda fiksasyon pinlerinin statik bilgisayar destekli implant cerrahisi (sCAIS) doğruluğuna etkisi.',
+    model:'In-vitro. Sağ 1.premolar–3.molar eksik hasta dental modeli; Straumann full-guide, coDiagnostiX. 4 protokol: pinsiz (NF), bukkal tek (BF), palatal tek (PF), bilateral (BPF).',
+    bulgu:'NF en yüksek sapma (açısal 3.65°, platform 1.58 mm, apeks 2.18 mm); BPF en düşük (1.88°, 1.09, 1.53 mm); NF↔BPF anlamlı. Tek pin yalnız açısal doğruluğu etkiledi; pin pozisyonu (bukkal/palatal) implant doğruluğunu anlamlı etkilemedi.',
+    iliski:'Tezin temel hipotezinin birebir metodoloji örneği (pin sayısı/konumu × sapma). Bilateral pin faydasını destekler. <b>Boşluk:</b> diş destekli (kemik destekli değil), D3/atrofik değil; pin pozisyon etkisi sınırlı bulunmuş — Ozan atrofik D3 kemik-destekli kurguda yeniden sınayabilir.',
+    tags:['fiksasyon pini','pin pozisyonu','maksilla','in-vitro','sapma'] },
+
+  { pos:{x:845,y:250}, group:'invitro',
+    short:'Elnadoury ve ark.', short2:'2025 · J Prosthodont',
+    title:'Factors affecting stability of surgical guides in mandibular unilateral distal extension situation: An in vitro study',
+    cite:'Elnadoury EA, Gaweesh YS, Abu El Sadat SM, Abd-Ellah ME. (2025). <i>J Prosthodont</i> (baskıda).',
+    doi:'10.1111/jopr.14043',
+    amac:'Guide tasarımı, diş konumu ve uygulanan kuvvetin tek-taraflı diş destekli guide\'larda implant sapması ve guide stabilitesine etkisi.',
+    model:'10 epoksi reçine model + yumuşak doku simülasyonu. 3 tasarım: tam uzatılmış / 2 pin / 1 pin. Bukkal–oral kuvvet (0.1–5 N). Intraoral tarayıcı ile guide deplasmanı; 470 sanal implant ile sapma (tahribatsız ölçüm).',
+    bulgu:'2 fiksasyon pini en az dikey sapma (0.38 mm) ve guide sapması (0.52 mm). Kuvvet yönü dikey sapmayı, kuvvet büyüklüğü açısal sapmayı belirgin etkiledi; molar bölgede sapma daha büyük. Uygulanan kuvvet, tasarımdan daha etkili.',
+    iliski:'Ozan\'ın "<b>kuvvet altında guide mikro-hareketi</b>" çıktısı için ideal tahribatsız metodoloji modeli (tarayıcı + sanal implant). 2 pin > 1 pin. <b>Boşluk:</b> mandibula + diş destekli; atrofik maksilla / D3 kemik-destekli değil; pin <i>pozisyonu</i> ekseni yok.',
+    tags:['guide stabilitesi','kuvvet altında','fiksasyon pini','tahribatsız ölçüm','reçine model'] },
+
+  { pos:{x:775,y:610}, group:'invitro',
+    short:'Pessoa ve ark.', short2:'2021 · J Prosthodont',
+    title:'The Impact of Surgical Guide Fixation and Implant Location on Accuracy of Static Computer-Assisted Implant Surgery',
+    cite:'Pessoa R, Siqueira R, Li J, Saleh I, Meneghetti P, Bezerra F, Wang HL, Mendonça G. (2021). <i>J Prosthodont</i>, 31(2):155–164.',
+    doi:'10.1111/jopr.13371',
+    amac:'Diş destekli serbest-sonlu implantasyonda fiksasyon pini olan/olmayan guide\'ın doğruluğu ve implant konumunun etkisi.',
+    model:'32 çoğaltılmış <b>maksiller reçine model</b>; sol maksilla distal uzantı bölgesi. Guide seviyesi + yerleştirilen implant sapması optik tarama ve süperimpozisyon ile.',
+    bulgu:'Fiksasyon pini depth ve angular sapmada anlamlı etki; horizontal apikal pinli↔pinsiz farkı anlamlı (p=0.044). Pinli/pinsiz çoğunlukla klinik kabul edilebilir. Basılan guide sleeve\'i plandan ort. ~0.5 mm koronalde.',
+    iliski:'Maksiller reçine model üzerinde fiksasyon pini × sapma — değişken ve ölçüm metodolojisi örneği. Pin etkisini kısmen destekler. <b>Boşluk:</b> kemik destekli değil, D3 yoğunluk kontrolü yok, pin yalnız var/yok (pozisyon değil).',
+    tags:['fiksasyon pini','maksilla','reçine model','sapma','sleeve'] },
+
+  { pos:{x:225,y:610}, group:'klinik',
+    short:'Verhamme ve ark.', short2:'2014 · Clin Implant Dent Relat Res',
+    title:'An Accuracy Study of Computer-Planned Implant Placement in the Augmented (Atrophic) Maxilla Using Mucosa-Supported Surgical Templates',
+    cite:'Verhamme LM, Meijer GJ, Bergé SJ, Soehardi RA, Xi T, de Haan AFJ, Schutyser F, Maal TJJ. (2014). <i>Clin Implant Dent Relat Res</i>, 17(6):1154–1163.',
+    doi:'10.1111/cid.12230',
+    amac:'İleri rezorbe (atrofik) + augmente maksillada mukoza destekli template ile implant doğruluğu; fiksasyon pininin etkisi.',
+    model:'Klinik. 25 ödentulöz hasta, ileri alveolar rezorpsiyon + kemik augmentasyonu; 6 implant/hasta. Pre/post CBCT eşleştirme; Implant Position Orthogonal Projection.',
+    bulgu:'Mezio-distal tip sapma 1.50 mm, açısal 2.50°; sapmalar augmentasyonsuz vakalardan büyük. <b>Fiksasyon pini kullanımı</b> implant sapmaları ile template rotasyon/translasyonunda <b>anlamlı fark</b> gösterdi. Sapmalar ağırlıkla template açılanma/kaymasından.',
+    iliski:'<b>Atrofik maksilla + fiksasyon pini + template stabilitesi</b> — Ozan\'ın klinik bağlamına en yakın çalışma; pin önemini destekler. <b>Boşluk:</b> klinik (kontrollü in-vitro değil), mukoza destekli (kemik destekli değil), pin <i>pozisyonu</i> sistematik değil, D3 yoğunluk kontrolü yok.',
+    tags:['atrofik maksilla','fiksasyon pini','template stabilitesi','klinik','CBCT'] },
+
+  { pos:{x:155,y:250}, group:'klinik',
+    short:'Verhamme ve ark.', short2:'2013 · Clin Implant Dent Relat Res',
+    title:'A Clinically Relevant Accuracy Study of Computer-Planned Implant Placement in the Edentulous Maxilla Using Mucosa-Supported Surgical Templates',
+    cite:'Verhamme LM, Meijer GJ, Boumans T, de Haan AFJ, Bergé SJ, Maal TJJ. (2013). <i>Clin Implant Dent Relat Res</i>, 17(2):343–352.',
+    doi:'10.1111/cid.12112',
+    amac:'Ödentulöz maksillada mukoza destekli template doğruluğu; fiksasyon pini ve ark üzerindeki konumun sapmaya etkisi.',
+    model:'Klinik. 30 ödentulöz hasta, 2–4 implant; pre/post CBCT; Implant Position Orthogonal Projection ile klinik anlamlı sapma.',
+    bulgu:'Bukko-lingual tip sapma 0.67 mm, açısal 1.74°. <b>Fiksasyon pini, ark konumu ve cerrahi tipi implant sapmalarında anlamlı etki GÖSTERMEDİ</b>; template\'in ön-arka konumlandırması kritik bulundu (sapmaların ana nedeni).',
+    iliski:'<b>Çelişkili/null bulgu:</b> burada pin etkisiz; Verhamme 2014\'te (atrofik) pin anlamlı. Bu karşıtlık literatürdeki tartışmayı/boşluğu işaret eder. Ozan, kontrollü <b>in-vitro D3 kemik-destekli</b> kurguda pin <b>pozisyonunu</b> ölçerek bu çelişkiye katkı verebilir — güçlü gerekçe.',
+    tags:['ödentulöz maksilla','fiksasyon pini (null)','template konumu','klinik','çelişki'] },
+];
+
+const NS='http://www.w3.org/2000/svg';
+const W=170,H=66;
+function el(tag,attrs){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);return e;}
+
+articles.forEach((a,i)=>{
+  const g=document.getElementById('n'+i);
+  const col=G[a.group];
+  const x=a.pos.x-W/2, y=a.pos.y-H/2;
+  g.appendChild(el('rect',{x,y,width:W,height:H,rx:13,fill:col.fill,stroke:col.stroke,'stroke-width':3}));
+  const t1=el('text',{x:a.pos.x,y:a.pos.y-4,'text-anchor':'middle',class:'t1'});t1.textContent=a.short;
+  const t2=el('text',{x:a.pos.x,y:a.pos.y+15,'text-anchor':'middle',class:'t2'});t2.textContent=a.short2;
+  g.appendChild(t1);g.appendChild(t2);
+  const tt=el('title');tt.textContent=a.title;g.appendChild(tt);
+  g.addEventListener('click',()=>show(i));
+  g.addEventListener('keypress',e=>{if(e.key==='Enter')show(i);});
+});
+
+function show(i){
+  const a=articles[i],col=G[a.group];
+  document.getElementById('defaultHint').style.display='none';
+  const d=document.getElementById('detail');d.style.display='block';
+  d.innerHTML=`
+    <span class="badge ${col.cls}">${col.name}</span>
+    <h2>${a.short} (${a.short2.split(' · ')[0]})</h2>
+    <div style="font-size:13.5px;font-weight:600;margin:2px 0 8px">${a.title}</div>
+    <div class="cite">${a.cite}<br>DOI: <a href="https://doi.org/${a.doi}" target="_blank" rel="noopener">${a.doi}</a></div>
+    <div class="row"><div class="k">Amaç</div><div class="v">${a.amac}</div></div>
+    <div class="row"><div class="k">Yöntem / Kemik modeli</div><div class="v">${a.model}</div></div>
+    <div class="row"><div class="k">Temel bulgular</div><div class="v">${a.bulgu}</div></div>
+    <div class="row"><div class="k">Ozan'ın teziyle ilişkisi</div><div class="rel"><div class="v">${a.iliski}</div></div></div>
+    <div class="tags">${a.tags.map(t=>'<span class="tg">'+t+'</span>').join('')}</div>
+  `;
+  d.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>

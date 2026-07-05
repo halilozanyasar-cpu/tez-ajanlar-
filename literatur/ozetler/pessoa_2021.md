@@ -1,0 +1,16 @@
+# Pessoa 2021 — Guide fiksasyonu ve implant konumunun statik bilgisayar destekli cerrahi doğruluğuna etkisi (in-vitro)
+- **Künye:** Pessoa R, Siqueira R, Li J, Saleh I, Meneghetti P, Bezerra F, Wang HL, Mendonça G. The Impact of Surgical Guide Fixation and Implant Location on Accuracy of Static Computer-Assisted Implant Surgery. J Prosthodont. 2021;31(2):155-164.
+- **DOI/Link:** https://doi.org/10.1111/jopr.13371
+- **Erişim:** Paywall · PDF: yok (özet + DOI) · PMID 33904640
+- **Çalışma tipi:** In-vitro deneysel (statik guide, sCAIS) — Kanıt düzeyi orta
+- **Örneklem/Materyal:** 32 çoğaltılmış **maksiller reçine model**; sol maksilla distal uzantı (serbest-sonlu) bölgesi; pozisyonlar #13, 14, 15. Fiksasyon pinli ve pinsiz şablonlar.
+- **Yöntem (özet):** Dijital planlama + 3D basılı şablon. Şablon yerleştikten sonra guide-seviyesi optik tarama; implant + scan body yerleştikten sonra ikinci tarama; pre-op taramaya süperimpozisyonla guide ve implant sapmaları (global, horizontal, depth, angular). Üç-yönlü ANOVA (konum × pin × karşılaştırma).
+- **Ana bulgular:**
+  - Fiksasyon pini **depth ve angular sapmada anlamlı etki**.
+  - Horizontal apikal: pinsiz 1.63±0.69 mm vs pinli 1.72±0.70 mm, fark anlamlı (p=0.044). Depth: pinsiz -0.5±0.5 mm vs pinli -0.16±0.62 mm anlamlı (p=0.005).
+  - Pinli ve pinsiz genelde klinik kabul edilebilir aralıkta.
+  - Basılan guide sleeve'i dijital plandan ortalama ~0.5 mm daha koronalde.
+- **Tezle ilgisi:** ANA KAYNAK. METOD-GEREKÇE (maksiller reçine model + guide/implant sapma ölçüm protokolü); DISC-DESTEK (fiksasyon pini depth/angular doğruluğu etkiler). Boşluk: kemik destekli değil, D3 yoğunluk kontrolü yok, pin yalnız var/yok (konum karşılaştırması yok). DISC-LIMIT: basılı sleeve sapması da hata kaynağı.
+- **Alıntılanabilir cümleler:** "The use of fixation pins... had a statistically significant effect on the depth and angular deviation." / "The final sleeve position on the 3D printed guide was on average 0.5 mm more coronal than the digital plan."
+- **Kanıt düzeyi:** In-vitro deneysel (orta)
+- **Notlar/çekinceler:** Diş destekli; kemik yoğunluğu kontrol edilmemiş. Pin etkisi var ama büyüklüğü küçük; sleeve üretim hatası ek değişken — bizim model standardizasyonu için uyarı.

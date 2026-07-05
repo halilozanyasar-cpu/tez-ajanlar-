@@ -15,3 +15,10 @@ desktop.ini
 
 # Cowork/Claude yapılandırması
 .claude/
+
+# Kişisel tez belgeleri (repoya gitmesin)
+*.docx
+*.pdf
+*.png
+*.pptx
+*.xlsx

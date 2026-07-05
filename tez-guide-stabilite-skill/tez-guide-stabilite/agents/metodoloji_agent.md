@@ -47,6 +47,8 @@ Her grubu kodla (örn. G1: 2-pin bukkal, G2: 3-pin üçgen, G3: 4-pin karma...).
 **Adım 2 — Örneklem & güç analizi.** `references/istatistik_rehberi.md` ile birlikte:
 - Beklenen etki büyüklüğünü literatürden türet (Literatür Sentez Raporu).
 - G*Power ile grup başı n hesapla (genelde α=0.05, güç=0.80, ANOVA/karışık model için f).
+- **Karışık-model uyarısı:** birincil analiz grup × kuvvet **etkileşimi** olduğundan basit ANOVA n'i yetersiz kalabilir; etkileşim için etki büyüklüğünü literatürden güvenle türetemiyorsan **küçük bir pilot çalışma (grup başı 3-5 model)** ile varyans/etki büyüklüğü kestir, örneklemi ona göre sabitle. Pilot gereğini açıkça "açık soru" olarak belleğe yaz.
+- **Çokluluk için ayarla:** dört sapma sonucu arası aile-bazlı düzeltme (Bonferroni/Holm) planlıyorsan, güç analizinde düzeltilmiş α kullan (örn. 0.05/4) — aksi halde çalışma güçsüz kalır.
 - Grup sayısı × n × tekrar = toplam model/guide sayısı. Maliyet/baskı kapasitesiyle dengele.
 
 **Adım 3 — Model standardizasyonu.** `references/model_standardizasyonu.md`:
@@ -64,6 +66,7 @@ Her grubu kodla (örn. G1: 2-pin bukkal, G2: 3-pin üçgen, G3: 4-pin karma...).
 - Kuvvet ÖNCESİ yerleştirme taraması → kuvvet ALTINDA/SONRASI yerleştirme taraması.
 - Superimpozisyon ile koronal, apikal, açısal, derinlik sapması.
 - Δsapma = (kuvvet altı sapma) − (kuvvet öncesi sapma) = birincil sonuç.
+- **Ölçüm güvenilirliği protokolü (ICC — tasarımda planla):** ölçümü **iki bağımsız gözlemci** yapar; bir alt küme (≥10-15 ölçüm) **aynı gözlemci tarafından ≥2 hafta arayla** tekrarlanır. Böylece gözlemci-arası ve gözlemci-içi ICC hesaplanabilir. Kör ölçüm ilkesiyle birleştir (gözlemci pin grubunu bilmemeli). Bu adım tasarıma baştan yazılmazsa istatistik ajanı güvenilirliği raporlayamaz — jüri/hakem bunu sorar.
 
 **Adım 6 — Akış şeması & değişken sözlüğü.** Tüm iş akışını tek diyagrama indir; her değişkenin birimi ve ölçüm aracı listelensin.
 
@@ -75,7 +78,7 @@ Her grubu kodla (örn. G1: 2-pin bukkal, G2: 3-pin üçgen, G3: 4-pin karma...).
 ### 2. Örneklem & Güç Analizi (n hesabı + varsayımlar)
 ### 3. Model Üretim & Standardizasyon Protokolü
 ### 4. Kuvvet Uygulama Protokolü
-### 5. Sapma Ölçüm & Superimpozisyon Protokolü
+### 5. Sapma Ölçüm & Superimpozisyon Protokolü (+ ICC güvenilirlik tasarımı: 2 gözlemci + tekrar)
 ### 6. İş Akış Şeması + Değişken Sözlüğü
 ### 7. Sınırlılıklar & yanlılık kontrolleri
 ```

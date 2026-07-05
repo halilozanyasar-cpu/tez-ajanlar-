@@ -9,8 +9,8 @@
     {
       "name": "tez-guide-stabilite",
       "source": "./",
-      "description": "9 ajanlı in-vitro tez pipeline'ı: literatür → kanıt-haritalama → metodoloji → istatistik/analiz → yazım + strateji/denetim süpervizörü + humanizer (akademik-mod AI-yazım temizleme, MIT) + ARS köprü (academic-research-skills orkestrasyonu) + görsel 3D mind map (HTML, seans sonu güncellenen). Oturum belleği, literatür arşivi (PubMed özet+PDF), teze özel protokoller.",
-      "version": "1.5.0",
+      "description": "11 ajanlı in-vitro tez pipeline'ı: literatür → kanıt-haritalama → metodoloji → istatistik/analiz (ICC güvenilirlik + çokluluk) → yazım + strateji/denetim süpervizörü + humanizer (akademik-mod AI-yazım temizleme, MIT) + özgünlük-denetim (humanizer sonrası cümle-düzeyi AI-pattern/yazar-sesi QA; dürüst çerçeve — dedektör kandırma değil) + ARS köprü (academic-research-skills orkestrasyonu) + jüri/savunma (savunma hazırlık + jüri/hakem itirazı OTONOM düzeltme döngüsü: itiraz→ilgili ajan revize→strateji'ye bildirim, insan onayı yok) + görsel 3D mind map (HTML, seans sonu güncellenen). Oturum belleği, literatür arşivi (PubMed özet+PDF), teze özel protokoller.",
+      "version": "1.7.0",
       "license": "CC-BY-NC-4.0"
     }
   ]

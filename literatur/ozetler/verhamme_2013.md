@@ -1,0 +1,16 @@
+# Verhamme 2013 — Ödentulöz maksillada mukoza destekli şablonla implant doğruluğu (klinik)
+- **Künye:** Verhamme LM, Meijer GJ, Boumans T, de Haan AFJ, Bergé SJ, Maal TJJ. A clinically relevant accuracy study of computer-planned implant placement in the edentulous maxilla using mucosa-supported surgical templates. Clin Implant Dent Relat Res. 2013;17(2):343-352.
+- **DOI/Link:** https://doi.org/10.1111/cid.12112
+- **Erişim:** Paywall · PDF: yok (özet + DOI) · PMID 23879524
+- **Çalışma tipi:** Klinik prospektif doğruluk çalışması — Kanıt düzeyi III-IV
+- **Örneklem/Materyal:** 30 ödentulöz hasta, maksillada 104 Brånemark MkIII Groovy implant (2-4/hasta); mukoza destekli şablon, flapless.
+- **Yöntem (özet):** Pre-op CBCT + sanal planlama; mukoza destekli şablonla flapless yerleştirme; post-op CBCT pre-op'a eşleştirildi; Implant Position Orthogonal Projection ile klinik anlamlı sapma. Cerrahi tipi, fiksasyon pini ve ark konumunun etkisi incelendi.
+- **Ana bulgular:**
+  - Bukko-lingual: tip 0.67 mm, shoulder 0.51 mm, derinlik -0.83 mm, açısal 1.74°.
+  - Mezio-distal: tip 0.75 mm, shoulder 0.60 mm, derinlik -0.75 mm, açısal 1.94°.
+  - İmplantların %74'ü planlanandan sığ yerleşti.
+  - **Fiksasyon pini, ark konumu ve cerrahi tipi implant sapmalarında anlamlı etki GÖSTERMEDİ;** şablonun ön-arka konumlandırması kritik (sapmaların ana nedeni).
+- **Tezle ilgisi:** ANA KAYNAK (çelişki ekseni). DISC-ÇELİŞKİ (burada fiksasyon pini etkisiz ↔ Verhamme 2014'te anlamlı → pin etkisi kemik/destek koşuluna bağlı olabilir); INTRO-BOŞLUK (pin etkisi literatürde tartışmalı, kontrollü in-vitro gerekçesi). Boşluk: klinik, mukoza destekli, standart (atrofik değil) ödentulöz, pin konumu sistematik değil, D3 kontrolü yok.
+- **Alıntılanabilir cümleler:** "Implant position on the dental arch, the use of fixation pins, and type of surgery showed no significant effect on implant deviations." / "Exact positioning of the surgical template... is crucial in reducing implant deviations."
+- **Kanıt düzeyi:** III-IV (klinik prospektif)
+- **Notlar/çekinceler:** Standart (non-atrofik) ödentulöz maksilla; mukoza destekli. Verhamme 2014 ile aynı grup/metot ama zıt pin sonucu → tezin gerekçesini güçlendiren çelişki; kontrollü in-vitro D3 kemik-destekli pin-pozisyonu çalışması bu çelişkiyi çözebilir.

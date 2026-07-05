@@ -30,15 +30,17 @@ OKUYABİLECEKLERİN: Metodoloji Planı (değişken kodları, grup tanımları, b
 
 ## Temel İlkeler
 
-1. **Önce varsayım.** Test seçmeden önce normallik (Shapiro-Wilk), varyans homojenliği (Levene), bağımsızlık kontrol et.
+1. **Önce güvenilirlik, sonra varsayım.** Sapma sonucunu yorumlamadan önce ölçüm güvenilirliğini (ICC) kanıtla; sonra normallik (Shapiro-Wilk), varyans homojenliği (Levene), bağımsızlık kontrol et.
 2. **Tasarıma uygun test.** Tekrarlı ölçüm (kuvvet öncesi/sonrası aynı model) varsa eşleştirilmiş/karışık model; gruplar arası ANOVA. `references/istatistik_rehberi.md`'deki karar ağacını izle.
 3. **Etki büyüklüğü + GA.** Sadece p değil; etki büyüklüğü (η², Cohen's d) ve %95 güven aralığı raporla.
-4. **Çoklu karşılaştırma düzeltmesi.** Post-hoc'ta Bonferroni/Tukey uygula.
+4. **İki katmanlı çokluluk.** (a) Dört sapma sonucu (koronal/apikal/açısal/derinlik) **arası** aile-bazlı düzeltme (Bonferroni/Holm veya MANOVA); (b) her ANOVA sonrası post-hoc'ta Bonferroni/Tukey. İkisi ayrıdır; biri diğerinin yerine geçmez.
 5. **Şeffaf ve tekrarlanabilir.** Tüm analiz Python script'i olarak; ham veri → sonuç izlenebilir.
 
 ## İş Akışı
 
 **Adım 1 — Veri alımı & temizlik.** `templates/veri_toplama_template.md` şemasına göre CSV'yi oku. Eksik/aykırı değer kontrolü, birim tutarlılığı, grup kodu doğrulaması.
+
+**Adım 1.5 — Ölçüm güvenilirliği (ICC).** Tekrar-ölçüm alt kümesi varsa gözlemci-içi ve gözlemci-arası **ICC** hesapla (`pingouin.intraclass_corr`; model+tip+%95 GA raporla). ICC <0.75 ise ana analiz öncesi uyar ve ölçüm protokolünün gözden geçirilmesini öner (`istatistik_rehberi.md` "Ölçüm güvenilirliği"). Tekrar-ölçüm verisi yoksa metodoloji ajanına geri bildir — bu bir tasarım açığıdır.
 
 **Adım 2 — Tanımlayıcı istatistik.** Her grup ve her sapma türü için ortalama±SS, medyan, IQR, min-maks. Δsapma (kuvvet öncesi vs. altı) hesapla.
 
@@ -48,6 +50,7 @@ OKUYABİLECEKLERİN: Metodoloji Planı (değişken kodları, grup tanımları, b
 - Birincil soru: kuvvet öncesi vs. altında sapma farkı pin grubuna göre değişiyor mu? → **karışık (mixed) ANOVA** (grup × kuvvet etkileşimi) veya tekrarlı ölçüm modeli.
 - İkincil: gruplar arası mutlak sapma farkı → tek yönlü ANOVA + post-hoc.
 - Mikro-hareket ile sapma ilişkisi → korelasyon/regresyon.
+- **Sonuçlar-arası çokluluk:** dört sapma sonucu (koronal/apikal/açısal/derinlik) ayrı ayrı test ediliyorsa aile-bazlı hatayı Bonferroni/Holm ile düzelt; sonuçlar güçlü ilişkiliyse MANOVA + tek-değişkenli takip. Seçtiğin yolu gerekçelendir (`istatistik_rehberi.md` "Çoklu SONUÇ değişkeni").
 
 **Adım 5 — Görselleştirme (Python).** matplotlib/seaborn ile:
 - Gruplara göre kutu/violin grafiği (her sapma türü)
@@ -62,11 +65,12 @@ Yayın standardı: net eksen etiketleri (birimli), anlamlılık işaretleri, ren
 
 ```
 ## Bulgular
-### 1. Tanımlayıcı İstatistik Tablosu
-### 2. Varsayım Kontrol Sonuçları
-### 3. Birincil/İkincil Test Sonuçları (p, etki büyüklüğü, %95 GA)
-### 4. Grafikler (dosya yolları)
-### 5. İstatistik Özeti (düz dille bulgular)
+### 1. Ölçüm Güvenilirliği (ICC — gözlemci-içi/arası, model+tip+GA)
+### 2. Tanımlayıcı İstatistik Tablosu
+### 3. Varsayım Kontrol Sonuçları
+### 4. Birincil/İkincil Test Sonuçları (p, etki büyüklüğü, %95 GA; sonuçlar-arası + post-hoc düzeltme)
+### 5. Grafikler (dosya yolları)
+### 6. İstatistik Özeti (düz dille bulgular)
 + analiz.py (tekrarlanabilir script)
 ```
 

@@ -1,0 +1,16 @@
+# Verhamme 2014 — Augmente (atrofik) maksillada mukoza destekli şablonla implant doğruluğu (klinik)
+- **Künye:** Verhamme LM, Meijer GJ, Bergé SJ, Soehardi RA, Xi T, de Haan AFJ, Schutyser F, Maal TJJ. An Accuracy Study of Computer-Planned Implant Placement in the Augmented Maxilla Using Mucosa-Supported Surgical Templates. Clin Implant Dent Relat Res. 2014;17(6):1154-1163.
+- **DOI/Link:** https://doi.org/10.1111/cid.12230
+- **Erişim:** Paywall · PDF: yok (özet + DOI) · PMID 25181255
+- **Çalışma tipi:** Klinik prospektif doğruluk çalışması — Kanıt düzeyi III-IV
+- **Örneklem/Materyal:** 25 ödentulöz hasta, ileri alveolar rezorpsiyon (atrofik maksilla) + kemik augmentasyonu; ikinci aşamada 150 Brånemark MkIII implant (6/hasta); mukoza destekli şablon, flapless.
+- **Yöntem (özet):** Pre-op CBCT + sanal planlama; mukoza destekli şablonla flapless yerleştirme; post-op CBCT pre-op'a kayıtlandı; Implant Position Orthogonal Projection ile bukko-lingual ve mezio-distal sapma. Fiksasyon pini ve ark konumunun etkisi incelendi.
+- **Ana bulgular:**
+  - Mezio-distal: tip sapma 1.50 mm, shoulder 1.27 mm, derinlik -0.60 mm, açısal 2.50°.
+  - Bukko-lingual: tip 0.99 mm, shoulder 0.76 mm, derinlik -0.57 mm, açısal 2.48°.
+  - Sapmalar augmentasyonsuz vakalardan **büyük**.
+  - **Fiksasyon pini kullanımı, implant sapmaları + şablon rotasyon/translasyonunda anlamlı fark gösterdi.** Sapmalar ağırlıkla şablon açılanma/translasyonundan.
+- **Tezle ilgisi:** ANA KAYNAK (klinik bağlam). INTRO-BAĞLAM (atrofik maksilla zorluğu, sapma standarttan büyük); DISC-DESTEK (fiksasyon pini atrofik maksillada sapma/stabilitede anlamlı — hipotezi destekler); DISC-MEKANİZMA (sapmanın ana nedeni şablon rotasyon/translasyonu = stabilite sorunu). Boşluk: klinik (kontrollü in-vitro değil), mukoza destekli (kemik destekli değil), pin konumu sistematik değil, D3 kontrolü yok.
+- **Alıntılanabilir cümleler:** "The use of fixation pins... showed statistically significant differences [for implant deviations and template rotations/translations]." / "Deviations are mainly caused by angulations and translations of the surgical template."
+- **Kanıt düzeyi:** III-IV (klinik prospektif)
+- **Notlar/çekinceler:** Mukoza destekli (bizim kemik destekli kurgudan farklı); augmente atrofik maksilla. Verhamme 2013 ile karşılaştırıldığında pin etkisi BURADA anlamlı → çelişki ekseninin bir ucu (kanıt haritası DISC-ÇELİŞKİ).
