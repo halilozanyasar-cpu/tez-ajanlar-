@@ -1,0 +1,17 @@
+{
+  "name": "ozan-tez",
+  "owner": {
+    "name": "Ozan",
+    "email": "halilozanyasar@gmail.com"
+  },
+  "metadata": {
+    "description": "Halil Ozan Yaşar tez araştırma ajan ekibi plugin marketplace'i."
+  },
+  "plugins": [
+    {
+      "name": "tez-guide-stabilite",
+      "source": "./tez-guide-stabilite-skill",
+      "description": "Atrofik üst çenede kemik destekli cerrahi guide'larda pin pozisyonlarının stabilite ve implant sapmasına etkisi — 11 ajanlı in-vitro tez araştırma pipeline'ı (literatür, kanıt-haritalama, metodoloji, istatistik/analiz, yazım, strateji-denetim, humanizer, özgünlük-denetim, ARS-köprü, jüri-savunma, görsel-mindmap)."
+    }
+  ]
+}
